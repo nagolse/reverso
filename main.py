@@ -4,7 +4,6 @@ from aiogram.types import ParseMode
 import os
 import re
 import sqlite3
-import subprocess
 from datetime import datetime
 from dotenv import load_dotenv
 
