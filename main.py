@@ -6,10 +6,16 @@ import re
 import sqlite3
 from datetime import datetime
 from dotenv import load_dotenv
+from fastapi import FastAPI
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")  # Токен бота з .env файлу
+app = FastAPI()
 
+# No routes or functionality; just binding to a port
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5000)
 # Додаємо проксі при створенні бота
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
