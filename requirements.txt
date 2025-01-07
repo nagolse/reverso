@@ -1,4 +1,4 @@
 aiogram
 sqlalchemy
-dotenv
+python-dotenv
 subprocess
