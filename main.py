@@ -12,10 +12,7 @@ load_dotenv()
 TOKEN = os.getenv("TOKEN")  # Токен бота з .env файлу
 app = FastAPI()
 
-# No routes or functionality; just binding to a port
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+
 # Додаємо проксі при створенні бота
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
@@ -102,5 +99,7 @@ async def reverse_and_clean(message: types.Message):
         return
 
 if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5000)
     executor.start_polling(dp, skip_updates=True)
 
