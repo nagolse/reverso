@@ -11,7 +11,7 @@ load_dotenv()
 TOKEN = os.getenv("TOKEN")  # Токен бота з .env файлу
 
 # Додаємо проксі при створенні бота
-bot = Bot(token=TOKEN, proxy='http://proxy.server:3128')
+bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 # Підключення до бази даних SQLite
